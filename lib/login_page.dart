@@ -1,7 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:latihan1_11pplg2/register_page.dart';
+import 'package:latihan1_11pplg2/widgets/custom_button.dart';
+import 'package:latihan1_11pplg2/widgets/custom_text.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,12 +25,11 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
         
           children: [
-            Text("Welcome to our app", style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              color: Colors.deepPurpleAccent,
-            ),),
-            Text("Please fill username and password below"),
+            CustomText(myText: "Welcome to our app", myStyle : const TextStyle(
+              color: Colors.blue,
+              fontSize: 20,
+            ) ),
+            CustomText(myText: "Login Page", myStyle: TextStyle()),
             
             Center(
               child: Image.asset(
@@ -58,9 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                   border: OutlineInputBorder(),
               ),),
             ),
-            SizedBox(
-              width: double.infinity,
-              child :ElevatedButton(onPressed: (){
+            
+            CustomButton(
+              myText: "Login", 
+              myColor: Colors.blue, 
+              onPressed: () {
                 if(txtPassword.text == "admin" && txtUsername.text == "admin"){
                   setState(() {
                     statuslogin = "Login berhasil";
@@ -70,25 +71,16 @@ class _LoginPageState extends State<LoginPage> {
                     statuslogin = "Login gagal";
                   });
                 }
-                log("status $statuslogin");
               }, 
-              child: Text("Login",))
-            ),  
-            Text(statuslogin),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const RegisterPage())
-                );
-                }, child: Text("Register", 
-                style: TextStyle(
-                  color: Colors.blue,
-                ),
-               )
               ),
-            )
+            
+            CustomButton(
+              myText: "Register", 
+              myColor: Colors.red, 
+              onPressed: () {
+
+              } ),
+            Text(statuslogin),
           ],
         ),
       ),

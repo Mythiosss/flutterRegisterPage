@@ -30,12 +30,12 @@
                 Customtb(
                   hint: "Username atau Email",
                   controller: usernameController,
-                  password: false,
+                  password: false, isNumber: false,
                 ),
                 Customtb(
                   hint: "Password", 
                   controller: passwordController, 
-                  password: true,
+                  password: true, isNumber: false,
                 ),
                 TextField(
                   controller: dateController,
