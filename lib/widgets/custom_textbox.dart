@@ -6,13 +6,15 @@ class Customtb extends StatelessWidget {
   final TextEditingController controller;
   final bool password;
   final bool isNumber;
+  final String label;
 
 
-  const Customtb({
+  const Customtb({super.key, 
     required this.hint,
     required this.controller,
     required this.password, 
     required this.isNumber,
+    required this.label
   });
 
   @override
@@ -25,6 +27,7 @@ class Customtb extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hint,
         border: OutlineInputBorder(),
+        labelText: label,
       ),
     );
   }

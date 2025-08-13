@@ -31,11 +31,13 @@
                   hint: "Username atau Email",
                   controller: usernameController,
                   password: false, isNumber: false,
+                  label: "",
                 ),
                 Customtb(
                   hint: "Password", 
                   controller: passwordController, 
                   password: true, isNumber: false,
+                  label: "",
                 ),
                 TextField(
                   controller: dateController,

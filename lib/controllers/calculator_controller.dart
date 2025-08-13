@@ -11,7 +11,7 @@ class CalculatorController extends GetxController{
     int angka2 = int.parse(txtangka2.text);
 
     int hasilJumlah = angka1 + angka2;
-    print("hasil jumlah " + hasilJumlah.toString());
+    print("hasil jumlah $hasilJumlah");
     textHasil.value = hasilJumlah.toString();
   }
 
@@ -20,7 +20,7 @@ class CalculatorController extends GetxController{
     int angka2 = int.parse(txtangka2.text);
 
     int hasilKurang = angka1 - angka2;
-    print("hasil kurang " + hasilKurang.toString());
+    print("hasil kurang $hasilKurang");
     textHasil.value = hasilKurang.toString();
   }
 
@@ -29,7 +29,7 @@ class CalculatorController extends GetxController{
     int angka2 = int.parse(txtangka2.text);
 
     int hasilKali = angka1 * angka2;
-    print("hasil kali " + hasilKali.toString());
+    print("hasil kali $hasilKali");
     textHasil.value = hasilKali.toString();
   }
 
@@ -38,7 +38,7 @@ class CalculatorController extends GetxController{
     int angka2 = int.parse(txtangka2.text);
 
     double hasilBagi = angka1 / angka2;
-    print("hasil bagi " + hasilBagi.toString());
+    print("hasil bagi $hasilBagi");
     textHasil.value = hasilBagi.toString();
   }
 

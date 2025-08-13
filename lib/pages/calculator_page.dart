@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1_11pplg2/controllers/calculator_controller.dart';
+import 'package:latihan1_11pplg2/routes/routes.dart';
 import 'package:latihan1_11pplg2/widgets/custom_button.dart';
 import 'package:latihan1_11pplg2/widgets/custom_textbox.dart';
 
@@ -20,8 +21,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
       appBar: AppBar(title: Text("Calculator"),),
       body: Column(
         children: [
-          Customtb(hint: "Input Angka 1", controller: widget.calculatorController.txtangka1, password: false, isNumber: true,),
-          Customtb(hint: "Input Angka 2", controller: widget.calculatorController.txtangka2, password: false, isNumber: true,),
+          Customtb(hint: "Input Angka 1", controller: widget.calculatorController.txtangka1, password: false, isNumber: true, label: "",),
+          Customtb(hint: "Input Angka 2", controller: widget.calculatorController.txtangka2, password: false, isNumber: true, label: "",),
           Container(
             
           ),
@@ -48,9 +49,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
             ],
 
           ),
-          Obx(() => Text("Hasil " + widget.calculatorController.textHasil.value),),
-          CustomButton(myText: "Clear", myColor: Colors.pink, onPressed: () {
-            
+          Obx(() => Text("Hasil ${widget.calculatorController.textHasil.value}"),),
+          CustomButton(myText: "My Team", myColor: Colors.pink, onPressed: () {
+            Get.toNamed(AppRoutes.umaPage);
           },)
         ],
       ),

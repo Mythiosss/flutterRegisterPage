@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latihan1_11pplg2/register_page.dart';
 import 'package:latihan1_11pplg2/widgets/custom_button.dart';
 import 'package:latihan1_11pplg2/widgets/custom_text.dart';
 
