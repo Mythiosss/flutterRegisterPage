@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:latihan1_11pplg2/controllers/bottom_nav_controller.dart';
 import 'package:latihan1_11pplg2/controllers/calculator_controller.dart';
-import 'package:latihan1_11pplg2/routes/routes.dart';
 import 'package:latihan1_11pplg2/widgets/custom_button.dart';
 import 'package:latihan1_11pplg2/widgets/custom_textbox.dart';
 
