@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:latihan1_11pplg2/controllers/bottom_nav_controller.dart';
 import 'package:latihan1_11pplg2/controllers/calculator_controller.dart';
 import 'package:latihan1_11pplg2/routes/routes.dart';
 import 'package:latihan1_11pplg2/widgets/custom_button.dart';
@@ -49,10 +50,22 @@ class _CalculatorPageState extends State<CalculatorPage> {
             ],
 
           ),
-          Obx(() => Text("Hasil ${widget.calculatorController.textHasil.value}"),),
-          CustomButton(myText: "My Team", myColor: Colors.pink, onPressed: () {
-            Get.toNamed(AppRoutes.umaPage);
-          },)
+          Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.grey[100],
+              ),
+              child: Obx(() => Text(
+                "Hasil: ${widget.calculatorController.textHasil.value}",
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              )),
+            ),
         ],
       ),
     );
