@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1_11pplg2/controllers/uma_player_controller.dart';
-import 'package:latihan1_11pplg2/controllers/edit_player_controller.dart'; 
 import 'package:latihan1_11pplg2/routes/routes.dart';
 
-class UmaPlayer extends StatelessWidget {
-  UmaPlayer({super.key});
+class UmaPlayerPage extends StatelessWidget {
+  UmaPlayerPage({super.key});
 
   final UmaPlayerController umaPlayerController = Get.put(UmaPlayerController());
-  final EditPlayerController editPlayerController = Get.put(EditPlayerController()); 
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,9 @@ class UmaPlayer extends StatelessWidget {
               onTap: (){
                 Get.toNamed(AppRoutes.editPage, arguments: index);
               },
+              
             );
+          
           },
         )),
       ),
