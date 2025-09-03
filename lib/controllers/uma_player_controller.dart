@@ -1,18 +1,7 @@
 import 'package:get/get.dart';
+import 'package:latihan1_11pplg2/model/playermodel.dart';
 
-class Player {
-  final String name;
-  final String position;
-  final String distance;
-  final String imagePath;
 
-  Player({
-    required this.name,
-    required this.position,
-    required this.distance,
-    required this.imagePath
-  });
-}
 
 class UmaPlayerController extends GetxController {
   var players = <Player>[
